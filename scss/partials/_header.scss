@@ -1,0 +1,100 @@
+.header{
+   a{
+        color: $black;
+    }
+   .header-top{
+       @extend %links;
+       background:url(../images/header-top-bg.jpg)0 0 repeat;
+       width: 100%;
+       text-align: right;
+       padding: 23px 0 11px 0;
+       li{
+           margin-left: 15px;
+       }
+       .tw{
+            width: 26px;
+            height: 15px;
+           background: url(../images/css-sprite-combined.png) -24px -2px no-repeat;
+       }
+       .fb{
+            width: 8px;
+            height: 16px;
+            background: url(../images/css-sprite-combined.png) -16px 0 no-repeat;
+        }
+        .ball{
+            width: 16px;
+            height: 17px;
+            background: url(../images/css-sprite-combined.png) 0 0 no-repeat;
+        }
+        .wf{
+            width: 17px;
+            height: 17px;
+            background: url(../images/css-sprite-combined.png) -50px 0 no-repeat;
+        }
+        @include sm{
+            text-align: center;
+        }
+   }
+
+   .header-bottom{
+        @extend %links;
+        vertical-align: center;
+        display: flex;
+        justify-content: space-between;
+        background: url(../images/header-bg.jpg);
+        .logo{
+            font-size: 24px;
+            padding-left: 45px;
+            padding-top: 16px;
+            padding-bottom: 13px;
+            position: relative;
+            span{
+                color: $red;
+            }
+        }
+
+        .logo::before {
+            content: "i";
+            position: absolute;
+            top: 11px;
+            left: 0;
+            display: inline-block;
+            color: $white;
+            width: 34px;
+            height: 34px;
+            background:$red;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        .nav{
+            margin-right: 12px;
+        }
+
+        .nav a{
+            padding: 22px 19px 0 0;
+            font-family: $addFont;
+            text-transform: uppercase;
+        }
+
+        .nav a:hover{
+            color: $red;
+        }
+        @include md{
+            display: block;
+            text-align: center;
+            .logo{
+                padding-left: 35px;
+            }
+            nav{
+                margin-right: 0;
+            }
+            nav a{
+                padding-right: 0;
+            }
+        }
+    }
+   
+}
+
+

@@ -1,0 +1,160 @@
+.main-block{
+    background: url(../images/main-img.jpg) center 0 no-repeat;
+    max-width: 100%;
+    min-height:450px;
+    position: relative;
+    h1 {
+        position: absolute;
+        top: 72px;
+        left: 193px;
+        padding: 9px 1px 1px 13px;
+        word-spacing: 5px;
+        font-size: $bigSize;
+        color: $white;
+        font-weight: bold;
+        span{
+            line-height: 42px;
+            display: block;
+            background: $mainBg;
+            margin-top: 1px; 
+        }
+        .first-line{
+            padding: 0 13px 1px 15px;
+            max-width: 355px;
+        }
+        .second-line{
+            padding: 0 0 0 15px;
+            max-width: 306px;
+        }
+        .third-line{
+            padding: 0 0 0 15px;
+            max-width: 180px;
+        }
+    }
+    @include lg{
+        h1{
+            top: 30%;
+            left: 5%;
+        }
+    }
+    @include md{
+        h1{
+            top: 30% ;
+            left: 0;
+            text-align: center;
+            font-size: $bigSize;        
+        }   
+    }
+    @include sm{
+        h1{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            text-align: center;
+            font-size: $titleSize;
+            padding: 5px 5px; 
+            span{
+                line-height: 25px;
+            }         
+        }   
+    }
+}
+
+.title-block{
+    background: url(../images/title-bg.jpg)0 0 no-repeat;
+    max-width: 100%;
+    border-bottom: 8px solid $red;
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-around;
+    padding: 39px 0 65px 33px;
+    @include lg{
+        flex-wrap: wrap;
+        padding: 0;
+        div{
+            max-width: 40%;
+        }
+    }
+    @include md{
+        display: block;
+        div{
+            max-width: 60%;
+            text-align: left;
+            padding-left: 5px;
+            h3{
+                text-align: left;
+            }
+        }
+    }
+
+    @include sm{
+        div{
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+%box{
+    max-width: 274px;
+    margin-right: 27px;
+    h3{
+        position: relative;
+        font-size:$titleSize;
+        color: $black;
+        padding-left: 46px;
+    }
+    h3::before{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -2px;
+        width: 31px;
+        height: 31px;
+        background: $iconsBg;
+    }
+    h3::after{
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 6px;
+    }
+
+    p {
+        font-family: $addFont;
+        color: $blackLight;
+        line-height: 18px;
+    }
+}
+
+.title-box-1{
+    @extend %box;
+    h3::after{
+        background: url(../images/title-icons.png)0 0 no-repeat;
+        width: 17px;
+        height: 17px;
+    }
+    
+}
+.title-box-2{
+    @extend %box;
+    h3::after{
+        background: url(../images/title-icons.png)-28px 0 no-repeat;
+        width: 19px;
+        height: 16px;
+    }
+    @include md{
+        margin-left: auto;
+    }
+}
+.title-box-3{
+    @extend %box;
+    h3::after{
+        background: url(../images/title-icons.png)-52px 0 no-repeat;
+        width: 17px;
+        height: 17px;
+    }
+}

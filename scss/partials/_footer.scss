@@ -1,0 +1,151 @@
+.footer{
+    background: url(../images/footer-bg.jpg)0 0 repeat;
+    max-width: 100%;
+    padding-bottom: 60px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: start;
+    word-spacing: 2px;
+    h3{
+       font-size: $mainSize;
+       font-weight: bold;
+       font-family: $addFont;
+       color: $white;
+       text-transform: uppercase; 
+       margin-bottom: 19px;
+    }
+
+    a,p{
+        color: $darkLight;
+        font-size: $mainSize;
+        text-align: left;
+        line-height: 18px;
+    }
+    .post-block {
+        max-width: 300px;
+        padding: 54px 15px 0 3px;
+        @extend %links;
+        h3{
+            margin-bottom: 2px;
+        }
+        li{
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-bottom: 1px solid #3b3b3b;
+        }
+        a{
+            text-transform: capitalize;
+        }
+    }
+    @include lg{
+        flex-wrap: wrap;
+        div{
+            max-width: 40%;
+        }
+    }
+    @include md {
+        display: block;
+        div{
+            max-width: 80%;
+        }
+    }
+}
+
+.intent-block{
+    max-width: 320px;
+    padding: 54px 0 0 23px;
+    p span{
+        display: block;
+        margin-top: 18px;
+    }
+    @include md{
+        margin-left: auto;
+    }
+    @include sm {
+        padding-left: 0;
+    }
+}
+
+.smedia-block {
+    @extend %links;
+    max-width: 320px;
+    padding: 52px 0 0 22px;
+    a{
+        width: 30px;
+        height: 30px;
+        margin-right: 2px;
+        margin-top: 4px;
+    }
+
+    .ic-1{
+        background: url(../images/smedia-icons.png)0 0 no-repeat;
+    }
+    .ic-2{
+        background: url(../images/smedia-icons.png) -39px 0 no-repeat;
+    }
+    .ic-3{
+        background: url(../images/smedia-icons.png)-76px 0 no-repeat;
+    }
+    .ic-4{
+        background: url(../images/smedia-icons.png)-114px 0 no-repeat;
+    }
+    .ic-5{
+        background: url(../images/smedia-icons.png)-152px 0 no-repeat;
+    }
+    .ic-6{
+        background: url(../images/smedia-icons.png)-189px 0 no-repeat;
+    }
+    .ic-7{
+        background: url(../images/smedia-icons.png)-228px 0 no-repeat;
+    }
+    .ic-8{
+        background: url(../images/smedia-icons.png)-266px 0 no-repeat;
+    }
+    .ic-9{
+        background: url(../images/smedia-icons.png)0 -39px no-repeat;
+    }
+    .ic-10{
+        background: url(../images/smedia-icons.png)-38px -39px no-repeat;
+    }
+    .ic-11{
+        background: url(../images/smedia-icons.png)-76px -39px no-repeat;
+    }
+    .ic-12{
+        background: url(../images/smedia-icons.png)-114px -39px no-repeat;
+    }
+    .ic-13{
+        background: url(../images/smedia-icons.png)-152px -39px no-repeat;
+    }
+    .ic-14{
+        background: url(../images/smedia-icons.png)-190px -39px no-repeat;
+    }
+    .ic-15{
+        background: url(../images/smedia-icons.png)-228px -39px no-repeat;
+    }
+    .ic-16{
+        background: url(../images/smedia-icons.png)-266px -39px no-repeat;
+    }
+    .ic-17{
+        background: url(../images/smedia-icons.png)0 -78px no-repeat;
+    }
+    .ic-18{
+        background: url(../images/smedia-icons.png)-38px -78px no-repeat;
+    }
+    .ic-19{
+        background: url(../images/smedia-icons.png)-76px -78px no-repeat;
+    }
+    .ic-20{
+        background: url(../images/smedia-icons.png)-114px -78px no-repeat;
+    }
+    @include lg{
+        .smedia-block{
+            padding-top: 20px;
+        }
+    }
+    @include sm {
+        padding-left: 0;
+    }
+}
